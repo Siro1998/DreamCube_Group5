@@ -406,7 +406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1135263754
 Transform:
   m_ObjectHideFlags: 0
@@ -548,7 +548,8 @@ MonoBehaviour:
   - GameRoom
   - Calibration
   ContentScenesNames:
-  - ReactiveGrids
+  - GameScene
+  - Reactive Grids
   - Splat
 --- !u!4 &1627232687
 Transform:
@@ -695,7 +696,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.29189518, b: 0.4245283, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
