@@ -548,8 +548,8 @@ MonoBehaviour:
   - GameRoom
   - Calibration
   ContentScenesNames:
-  - GameScene
-  - Reactive Grids
+  - GameScene1
+  - ReactiveGrids
   - Splat
 --- !u!4 &1627232687
 Transform:

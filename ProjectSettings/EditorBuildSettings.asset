@@ -23,11 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_DemoApp/Scenes/Base Scenes/StatsAndCalibration.unity
     guid: b3d1ddd74a699e04abd8c932689b2a50
-  - enabled: 1
-    path: Assets/MyTestingStuff/LowPoly Environment Pack/Demo/Demo 1.unity
+  - enabled: 0
+    path: 
     guid: e1b793c40df980747b159fd6e9176269
   - enabled: 1
     path: Assets/MyTestingStuff/GameScene.unity
     guid: 69a3e05cff0b0e442ad49fa40985bec2
+  - enabled: 1
+    path: Assets/MyTestingStuff/GameScene1.unity
+    guid: 2019f15719698c04e8e104375694fb14
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6ecc73b016925134b9c98863934d76e1, type: 2}
