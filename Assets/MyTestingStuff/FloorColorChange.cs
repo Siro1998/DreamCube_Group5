@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FloorColorChange : MonoBehaviour
 {
-    
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,7 @@ public class FloorColorChange : MonoBehaviour
             // Call SetColor using the shader property name "_Color" and setting the color to red
             //cubeRenderer.material.SetColor("_Color", customColor);
             cubeRenderer.material.color = Color.yellow;
+            audioSource.Play();
         }
         
     }
