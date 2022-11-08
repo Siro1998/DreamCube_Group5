@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4912942602540888085}
   - component: {fileID: 4912942602540888086}
   - component: {fileID: 4912942602540888087}
+  - component: {fileID: 2433789878280266033}
+  - component: {fileID: 8639194482331844979}
+  - component: {fileID: 4307226028112153965}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -110,3 +113,44 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2433789878280266033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912942602540888072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9036156, y: 2.1155033, z: 0.6661042}
+  m_Center: {x: 0.010537922, y: 0.038665295, z: -0.07931334}
+--- !u!54 &8639194482331844979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912942602540888072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4307226028112153965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912942602540888072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e75f59cfec72984db63cb28d6ffe08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

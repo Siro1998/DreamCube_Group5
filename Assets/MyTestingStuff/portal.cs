@@ -20,7 +20,7 @@ public class portal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ball"))
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("Main");
     }
 
 }
