@@ -39,7 +39,7 @@ public class DemoSceneManager : BaseSceneManager
 
     }
 
-    private void LoadSceneWithIndex(int newDemoSceneIndex)
+    public void LoadSceneWithIndex(int newDemoSceneIndex)
     {
         if(newDemoSceneIndex >= ContentScenesNames.Count)
         {

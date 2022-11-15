@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class portal : MonoBehaviour
+public class portal1 : MonoBehaviour
 {
     //private DemoSceneManager demoScene;
 
@@ -23,7 +23,7 @@ public class portal : MonoBehaviour
     {
         var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
         if (other.gameObject.CompareTag("Ball"))
-            demoScene.LoadSceneWithIndex(1);
+            demoScene.LoadSceneWithIndex(0);
     }
 
 }
