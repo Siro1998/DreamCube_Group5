@@ -5,41 +5,42 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     GameManager gameManager;
-    int heartnum;
-    // Start is called before the first frame update
+    private Collider m_Collider;
+
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
-        heartnum = 3;
+        m_Collider = GetComponent<Collider>();
+        StartCoroutine(ExampleCoroutine());
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
     private void OnCollisionEnter (Collision collision)
     {
-       // if(collision.CompareTag("player"))
         if (collision.gameObject.CompareTag("Ball")) {
-            // Kill the player
             DamagePlayer();
-            //Damage();
         }
     }
     void DamagePlayer()
     {
-        //heartnum-=1;
-        Debug.Log(heartnum);
-        Debug.Log(gameManager._healthController);
-        
-
         gameManager._healthController.playerHealth = gameManager._healthController.playerHealth - 1; //bombDamage;
-        // if(gameManager._healthController.playerHealth<1)
-        // {
-        //     playerMovement.Die();   
-        // }
+        Debug.Log(gameManager._healthController.playerHealth);
+        
+        var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
+        if(gameManager._healthController.playerHealth<1)
+        {
+            demoScene.LoadSceneWithIndex(0); 
+        }
         gameManager._healthController.UpdateHealth();
         //gameObject.SetActive(false);
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(2);
+        m_Collider.enabled = !m_Collider.enabled;
     }
 }

@@ -20,11 +20,10 @@ public class FloorColorChange : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnCollisionEnter (Collision collision)
     {
-        // only be triggered by an object tagged as "Ball"
-        if (other.gameObject.CompareTag("Ball")){
+       if (collision.gameObject.CompareTag("Ball")){
             // Get the Renderer component from the new cube
             var cubeRenderer = gameObject.GetComponent<Renderer>();
             // Create a new RGBA color using the Color constructor and store it in a variable
@@ -34,7 +33,6 @@ public class FloorColorChange : MonoBehaviour
             cubeRenderer.material.color = Color.yellow;
             audioSource.Play();
         }
-        
     }
 
     // public void SpawnCoins ()

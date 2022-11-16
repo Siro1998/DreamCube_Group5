@@ -46,10 +46,10 @@ public class DemoSceneManager : BaseSceneManager
             return;
         }
 
-        if(newDemoSceneIndex != _currentDemoSceneIndex)
-        {
+        //if(newDemoSceneIndex != _currentDemoSceneIndex)
+        //{
             _ = SceneLoader.SwitchScenes(ContentScenesNames[_currentDemoSceneIndex], ContentScenesNames[newDemoSceneIndex]);
             _currentDemoSceneIndex = newDemoSceneIndex;
-        }
+        //}
     }
 }
