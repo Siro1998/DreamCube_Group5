@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14626347, g: 0.040327713, b: 0.02498312, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.14627433, g: 0.040228322, b: 0.02494742, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -546,10 +546,10 @@ MonoBehaviour:
   baseSceneNamesList:
   - ClusterRender
   - GameRoom
-  - Calibration
+  - StatsAndCalibration
   ContentScenesNames:
-  - GameScene
   - GameScene1
+  - GameScene
 --- !u!4 &1627232687
 Transform:
   m_ObjectHideFlags: 0

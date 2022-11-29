@@ -30,10 +30,10 @@ public class Damage : MonoBehaviour
         Debug.Log(gameManager._healthController.playerHealth);
         
         var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
-        if(gameManager._healthController.playerHealth<1)
-        {
-            demoScene.LoadSceneWithIndex(0); 
-        }
+        // if(gameManager._healthController.playerHealth<1)
+        // {
+        //     demoScene.LoadSceneWithIndex(0); 
+        // }
         gameManager._healthController.UpdateHealth();
         //gameObject.SetActive(false);
     }
