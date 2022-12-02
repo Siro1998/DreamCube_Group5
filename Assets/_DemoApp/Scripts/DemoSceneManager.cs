@@ -11,6 +11,7 @@ public class DemoSceneManager : BaseSceneManager
 
     protected override void Start()
     {
+        PlayerPrefs.SetInt("Score",0);
         base.Start();
         StartCoroutine(SceneLoader.LoadSceneAsyncNamed(ContentScenesNames[_currentDemoSceneIndex]));
     }

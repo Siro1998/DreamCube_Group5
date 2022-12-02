@@ -26,15 +26,16 @@ public class Damage : MonoBehaviour
     }
     void DamagePlayer()
     {
-        gameManager._healthController.playerHealth = gameManager._healthController.playerHealth - 1; //bombDamage;
-        Debug.Log(gameManager._healthController.playerHealth);
+        GameManager.inst.DecrementScore();
+        //gameManager._healthController.playerHealth = gameManager._healthController.playerHealth - 1; //bombDamage;
+        //Debug.Log(gameManager._healthController.playerHealth);
         
-        var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
+        //var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
         // if(gameManager._healthController.playerHealth<1)
         // {
         //     demoScene.LoadSceneWithIndex(0); 
         // }
-        gameManager._healthController.UpdateHealth();
+        //gameManager._healthController.UpdateHealth();
         //gameObject.SetActive(false);
     }
 

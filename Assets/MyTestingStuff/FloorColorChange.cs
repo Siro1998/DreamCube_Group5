@@ -23,6 +23,7 @@ public class FloorColorChange : MonoBehaviour
     
     private void OnCollisionEnter (Collision collision)
     {
+       if (!enabled) return;
        if (collision.gameObject.CompareTag("Ball")){
             // Get the Renderer component from the new cube
             var cubeRenderer = gameObject.GetComponent<Renderer>();
@@ -31,7 +32,15 @@ public class FloorColorChange : MonoBehaviour
             // Call SetColor using the shader property name "_Color" and setting the color to red
             //cubeRenderer.material.SetColor("_Color", customColor);
             cubeRenderer.material.color = Color.yellow;
+            gameObject.tag = "BlockOnCollide";
             audioSource.Play();
+        }
+    }
+    private void OnCollisionExit (Collision collision)
+    {
+       if (!enabled) return;
+       if (collision.gameObject.CompareTag("Ball")){
+            gameObject.tag = "BlockNotOnCollide";
         }
     }
 

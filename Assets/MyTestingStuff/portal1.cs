@@ -22,8 +22,11 @@ public class portal1 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var demoScene = GameObject.FindObjectOfType<DemoSceneManager>();
-        if (other.gameObject.CompareTag("Ball"))
+        if (other.gameObject.CompareTag("Ball")){
+            PlayerPrefs.SetInt("Score", GameManager.inst.score);
+            //PlayerPrefs.Save();
             demoScene.LoadSceneWithIndex(0);
+        }
     }
 
 }

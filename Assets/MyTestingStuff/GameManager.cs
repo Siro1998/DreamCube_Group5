@@ -6,15 +6,21 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    int score;
+    public int score;
     public float Skyboxspeed;
     public static GameManager inst;
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] public HealthController _healthController;
+    //[SerializeField] public HealthController _healthController;
 
      public void IncrementScore ()
      {
          score++;
+         scoreText.text = "SCORE: " + score;
+     }
+
+    public void DecrementScore ()
+     {
+         score--;
          scoreText.text = "SCORE: " + score;
      }
 
@@ -25,7 +31,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _healthController.UpdateHealth();
+        score = PlayerPrefs.GetInt("Score");
+        scoreText.text = "SCORE: " + score;
+        //_healthController.UpdateHealth();
     }
 
     void Update()
