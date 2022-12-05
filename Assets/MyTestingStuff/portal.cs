@@ -26,7 +26,7 @@ public class portal : MonoBehaviour
             Debug.Log(GameManager.inst.score);
             PlayerPrefs.SetInt("Score", GameManager.inst.score);
             //PlayerPrefs.Save();
-            demoScene.LoadSceneWithIndex(1);
+            demoScene.LoadSceneWithIndex(2);
         }
     }
 

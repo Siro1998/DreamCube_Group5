@@ -25,7 +25,7 @@ public class portal1 : MonoBehaviour
         if (other.gameObject.CompareTag("Ball")){
             PlayerPrefs.SetInt("Score", GameManager.inst.score);
             //PlayerPrefs.Save();
-            demoScene.LoadSceneWithIndex(0);
+            demoScene.LoadSceneWithIndex(1);
         }
     }
 
