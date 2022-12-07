@@ -12,15 +12,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     //[SerializeField] public HealthController _healthController;
 
-     public void IncrementScore ()
+     public void IncrementScore (int num)
      {
-         score++;
+         score+=num;
          scoreText.text = "SCORE: " + score;
      }
 
     public void DecrementScore ()
      {
-         score--;
+         score-=50;
          scoreText.text = "SCORE: " + score;
      }
 
@@ -38,6 +38,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time*Skyboxspeed);
+        RenderSettings.skybox.SetFloat("_Rotation", 282.0f+Time.time*Skyboxspeed);
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LeftRightTrigger : MonoBehaviour
 {
-    public Material duplicateMaterial;
+    //public Material duplicateMaterial;
     public GameObject World;
     public float speed;
     bool rotating = false;
-    private GameObject duplicate;
-    private GameObject block;
+    //private GameObject duplicate;
+    //private GameObject block;
 
     // Start is called before the first frame update
     void Start()
@@ -40,16 +40,16 @@ public class LeftRightTrigger : MonoBehaviour
             yield break;
         }
         rotating = true;
-        block = GameObject.FindGameObjectWithTag("BlockOnCollide");
-        if(block!=null){
-            duplicate = Instantiate(block, block.transform.position+ new Vector3(0,0.001f,0), block.transform.rotation);
-            Vector3 objectScale = duplicate.transform.localScale;
-            objectScale.x = 0.79f;
-            duplicate.transform.localScale = objectScale;
-            duplicate.GetComponent<FloorColorChange>().enabled = false;
-            duplicate.tag = "BlockNotOnCollide";
-            duplicate.GetComponent<Renderer>().material = duplicateMaterial;
-        }
+        //block = GameObject.FindGameObjectWithTag("BlockOnCollide");
+        // if(block!=null){
+        //     duplicate = Instantiate(block, block.transform.position+ new Vector3(0,0.001f,0), block.transform.rotation);
+        //     Vector3 objectScale = duplicate.transform.localScale;
+        //     objectScale.x = 0.79f;
+        //     duplicate.transform.localScale = objectScale;
+        //     duplicate.GetComponent<FloorColorChange>().enabled = false;
+        //     duplicate.tag = "BlockNotOnCollide";
+        //     duplicate.GetComponent<Renderer>().material = duplicateMaterial;
+        // }
         float counter = 0;
         while (counter < duration)
         {
@@ -58,6 +58,6 @@ public class LeftRightTrigger : MonoBehaviour
             yield return null;
         }
         rotating = false;
-        Destroy(duplicate);
+        //Destroy(duplicate);
     }
 }

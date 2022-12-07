@@ -1,10 +1,11 @@
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Obstacle : MonoBehaviour {
+public class Coin : MonoBehaviour {
 
     [SerializeField] float turnSpeed = 90f;
+    public AudioSource audioSource;
 
     private void OnTriggerEnter (Collider other)
     {
@@ -18,10 +19,11 @@ public class Obstacle : MonoBehaviour {
             return;
         }
 
-        // lose to the player's score
-        GameManager.inst.IncrementScore();
-
-
+        // Add to the player's score
+        GameManager.inst.IncrementScore(20);
+        audioSource.Play();
+        // Destroy this coin object
+        Destroy(gameObject);
     }
 
     private void Start () {

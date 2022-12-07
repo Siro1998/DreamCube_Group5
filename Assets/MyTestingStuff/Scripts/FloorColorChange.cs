@@ -21,10 +21,11 @@ public class FloorColorChange : MonoBehaviour
         
     }
     
-    private void OnCollisionEnter (Collision collision)
+    private void OnTriggerEnter (Collider collision)
     {
        if (!enabled) return;
        if (collision.gameObject.CompareTag("Ball")){
+            GameManager.inst.IncrementScore(10);
             // Get the Renderer component from the new cube
             var cubeRenderer = gameObject.GetComponent<Renderer>();
             // Create a new RGBA color using the Color constructor and store it in a variable
@@ -36,7 +37,7 @@ public class FloorColorChange : MonoBehaviour
             audioSource.Play();
         }
     }
-    private void OnCollisionExit (Collision collision)
+    private void OnTriggerExit (Collider collision)
     {
        if (!enabled) return;
        if (collision.gameObject.CompareTag("Ball")){

@@ -13,6 +13,7 @@ public class DemoSceneManager : BaseSceneManager
     {
         PlayerPrefs.SetInt("Score",0);
         base.Start();
+        RenderSettings.skybox.SetFloat("_Rotation", 282.0f);
         StartCoroutine(SceneLoader.LoadSceneAsyncNamed(ContentScenesNames[_currentDemoSceneIndex]));
     }
 
