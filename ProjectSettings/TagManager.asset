@@ -14,6 +14,7 @@ TagManager:
   - Ball Trail
   - BlockOnCollide
   - BlockNotOnCollide
+  - End
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FloorColorChange : MonoBehaviour
 {
     public AudioSource audioSource;
+    private bool hasvisited = false;
     //[SerializeField] GameObject coinPrefab;
     //[SerializeField] GameObject obstaclePrefab;
     
@@ -24,7 +25,7 @@ public class FloorColorChange : MonoBehaviour
     private void OnTriggerEnter (Collider collision)
     {
        if (!enabled) return;
-       if (collision.gameObject.CompareTag("Ball")){
+       if (collision.gameObject.CompareTag("Ball") && !hasvisited){
             GameManager.inst.IncrementScore(10);
             // Get the Renderer component from the new cube
             var cubeRenderer = gameObject.GetComponent<Renderer>();
@@ -32,18 +33,19 @@ public class FloorColorChange : MonoBehaviour
             //Color customColor = new Color(0.4f, 0.9f, 0.7f, 1.0f);
             // Call SetColor using the shader property name "_Color" and setting the color to red
             //cubeRenderer.material.SetColor("_Color", customColor);
-            cubeRenderer.material.color = Color.yellow;
-            gameObject.tag = "BlockOnCollide";
+            cubeRenderer.material.color = Color.white;
+            //gameObject.tag = "BlockOnCollide";
             audioSource.Play();
+            hasvisited = true;
         }
     }
-    private void OnTriggerExit (Collider collision)
-    {
-       if (!enabled) return;
-       if (collision.gameObject.CompareTag("Ball")){
-            gameObject.tag = "BlockNotOnCollide";
-        }
-    }
+    // private void OnTriggerExit (Collider collision)
+    // {
+    //    if (!enabled) return;
+    //    if (collision.gameObject.CompareTag("Ball")){
+    //         //gameObject.tag = "BlockNotOnCollide";
+    //     }
+    // }
 
     // public void SpawnCoins ()
     // {

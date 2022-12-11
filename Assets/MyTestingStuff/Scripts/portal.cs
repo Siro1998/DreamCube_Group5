@@ -28,6 +28,9 @@ public class portal : MonoBehaviour
             //PlayerPrefs.Save();
             demoScene.LoadSceneWithIndex(2);
         }
+        if(other.gameObject.CompareTag("End")){
+            transform.parent.gameObject.GetComponent<MoveForward>().enabled = false;
+        }
     }
 
 }
