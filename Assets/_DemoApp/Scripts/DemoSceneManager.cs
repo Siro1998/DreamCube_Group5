@@ -12,6 +12,7 @@ public class DemoSceneManager : BaseSceneManager
     protected override void Start()
     {
         PlayerPrefs.SetInt("Score",0);
+        PlayerPrefs.SetInt("HighestScore",0);
         base.Start();
         RenderSettings.skybox.SetFloat("_Rotation", 282.0f);
         StartCoroutine(SceneLoader.LoadSceneAsyncNamed(ContentScenesNames[_currentDemoSceneIndex]));
